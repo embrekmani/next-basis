@@ -1,20 +1,33 @@
+const { nextui } = require('@nextui-org/react');
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    content: [
+        './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            backgroundImage: {},
+        },
     },
-  },
-  plugins: [],
+    darkMode: 'class',
+    plugins: [nextui({
+        // DOCS: https://nextui.org/docs/customization/layout
+        prefix: 'seed',
+        defaultTheme: 'dark',
+        defaultExtendTheme: 'dark',
+        layout: {
+            fontSize: {},
+            lineHeight: {},
+        },
+        themes: {
+            light: {},
+            dark: {}
+        }
+    })],
 }
 export default config
