@@ -17,7 +17,7 @@ const config: Config = {
     darkMode: 'class',
     plugins: [nextui({
         // DOCS: https://nextui.org/docs/customization/layout
-        prefix: 'seed',
+        prefix: 'next-basis',
         defaultTheme: 'dark',
         defaultExtendTheme: 'dark',
         layout: {
