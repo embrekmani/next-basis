@@ -12,6 +12,8 @@ _key languages, libraries, and technologies used in this project_
 -   tailwindcss
 -   typescript
 
+It is also ready to integrate with vercel for quick hosting.
+
 ## installation
 
 ```bash
